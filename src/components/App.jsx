@@ -54,13 +54,15 @@ export class App extends Component {
           <div>
              
         <Searchbar onSubmit={this.handleFormSubmit}/>
-             {this.state.isLoading && <Spinner />}
+             {/* {this.state.isLoading && <Spinner />} */}
              {this.state.images.length > 0 && (
           <>
             <ImageGallery images={this.state.images} />
+            
             <Button onClick={this.handleLoadMore} />
           </>
         )}
+         {this.state.isLoading && <Spinner />}
              <ToastContainer />
       
              </div>
